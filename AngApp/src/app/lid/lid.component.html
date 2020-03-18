@@ -1,23 +1,83 @@
-<p>lid works!</p>
-<!-- <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Voornaam</mat-label>
-      <input matInput required>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label>Achternaam</mat-label>
-        <input matInput required>
-    </mat-form-field>
-      <mat-form-field appearance="fill">
-      <mat-label>Select</mat-label>
-      <mat-select>
-        <mat-option value="option">Option</mat-option>
-        <mat-option value="option2">Option2</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Textarea</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
-  </div> -->
+<div class="example-container">
+  <div>
+  <mat-form-field appearance="fill">
+    <mat-label>Voornaam</mat-label>
+    <input matInput required>
+  </mat-form-field>
+  </div>
+  <div>
+  <mat-form-field appearance="fill">
+    <mat-label>Achternaam</mat-label>
+    <input matInput required>
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>Adres</mat-label>
+    <input matInput required>
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>Postcode</mat-label>
+    <input matInput required minlength="4">
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>Gemeente</mat-label>
+    <input matInput required>
+  </mat-form-field>
+</div>
+<div class="my-material-1">
+  <div class="my-material-2">
+    <div class="my-material-3">
+      <mat-radio-group aria-label="Geslacht" labelPosition="before" aria-required="true" style="font-size: smaller;">
+        <mat-radio-button value="M">M</mat-radio-button>
+        <mat-radio-button value="V">V</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>Geboortedatum</mat-label>
+    <input matInput [matDatepicker]="picker" [max]="maxDate" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker startView="multi-year" [startAt]="startDate"></mat-datepicker>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Rijksregisternummer</mat-label>
+    <input matInput type="text" maxlength="11" minlength="11" pattern="[0-9]{11}">
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>Geboorte plaats</mat-label>
+    <input matInput required>
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>email</mat-label>
+    <input matInput required type="email">
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>Telefoonnummer</mat-label>
+    <input matInput required>
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>Telefoonnummer 2</mat-label>
+    <input matInput required>
+  </mat-form-field>
+</div>
+<div>
+  <mat-icon aria-hidden="false" aria-label="save">save</mat-icon>
+</div>
+</div>
