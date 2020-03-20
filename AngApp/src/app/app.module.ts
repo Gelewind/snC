@@ -12,6 +12,7 @@ import { registerLocaleData } from '@angular/common';
 import localeNl from '@angular/common/locales/nl-BE';
 import localeNlExtra from '@angular/common/locales/extra/nl-BE';
 import { LidComponent } from './lid/lid.component';
+import { LedenComponent } from './leden/leden.component';
 
 registerLocaleData(localeNl, 'fr-FR', localeNlExtra);
 
@@ -20,7 +21,8 @@ registerLocaleData(localeNl, 'fr-FR', localeNlExtra);
     AppComponent,
     AanwezigComponent,
     HomeComponent,
-    LidComponent
+    LidComponent,
+    LedenComponent
   ],
   imports: [
     BrowserModule,

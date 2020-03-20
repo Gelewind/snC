@@ -8,17 +8,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class AanwezigComponent implements OnInit {
   constructor() { }
   encapsulation: ViewEncapsulation.None;
-  // title = 'ng-calendar-demo';
-  // selectedDate = new Date('2019/09/26');
-  // startAt = new Date('2019/09/11');
-  // minDate = new Date('2019/09/14');
-  // maxDate = new Date(new Date().setMonth(new Date().getMonth() + 1));
-  // year: any;
-  // DayAndDate: string;
   weekStart = 0;
 
   daysSelected: any[] = [];
-event: any;
+  event: any;
 
 isSelected = (event: any) => {
   const date = event.getFullYear() + '-' + ('00' + (event.getMonth() + 1)).slice(-2) + '-' + ('00' + event.getDate()).slice(-2);
@@ -39,6 +32,10 @@ select(event: any, calendar: any) {
 }
 
   ngOnInit() {
+    this.daysSelected.push('2020-03-01');
+    this.daysSelected.push('2020-03-05');
+    this.daysSelected.push('2020-02-25');
+    this.daysSelected.push('2020-02-15');
   }
 
 }

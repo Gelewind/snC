@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Lid } from '../Classes/lid';
 
 @Component({
   selector: 'app-lid',
@@ -9,7 +10,7 @@ export class LidComponent implements OnInit {
   minDate: Date;
   maxDate: Date;
   startDate: Date;
-
+  lid: Lid;
   constructor() {
 
     const currentYear = new Date().getFullYear();
@@ -17,7 +18,10 @@ export class LidComponent implements OnInit {
     this.minDate = new Date(currentYear - 6, oneMonth + 1, 28);
     this.maxDate = new Date(currentYear - 6, oneMonth + 1, 28);
     this.startDate =  new Date(currentYear - 6, oneMonth + 1, 28);
-    // Set the minimum to January 1st 20 years in the past and December 31st a year in the future.
+    this.lid = new Lid(1104, 'Bert', 'claes', 'Plezantstraat 37', '9100',
+      'Sint-Niklaas', new Date(1966, 12, 2), 'Sint-Niklaas',
+      'bert.claes@edpnet.be', 'bert@edpnet.be', '037650406',
+      '0478256068', true, '66120210544');
   }
 
   ngOnInit(): void {

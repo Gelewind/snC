@@ -2,39 +2,39 @@
   <div>
   <mat-form-field appearance="fill">
     <mat-label>Voornaam</mat-label>
-    <input matInput required>
+    <input matInput required [(ngModel)]="lid.voornaam">
   </mat-form-field>
   </div>
   <div>
   <mat-form-field appearance="fill">
     <mat-label>Achternaam</mat-label>
-    <input matInput required>
+    <input matInput required [(ngModel)]="lid.achternaam">
   </mat-form-field>
 </div>
 <div>
 <mat-form-field appearance="fill">
     <mat-label>Adres</mat-label>
-    <input matInput required>
+    <input matInput required [(ngModel)]="lid.straatnr">
   </mat-form-field>
 </div>
 <div>
 <mat-form-field appearance="fill">
     <mat-label>Postcode</mat-label>
-    <input matInput required minlength="4">
+    <input matInput required minlength="4" [(ngModel)]="lid.postcode">
   </mat-form-field>
 </div>
 <div>
 <mat-form-field appearance="fill">
     <mat-label>Gemeente</mat-label>
-    <input matInput required>
+    <input matInput required [(ngModel)]="lid.gemeente">
   </mat-form-field>
 </div>
 <div class="my-material-1">
   <div class="my-material-2">
     <div class="my-material-3">
-      <mat-radio-group aria-label="Geslacht" labelPosition="before" aria-required="true" style="font-size: smaller;">
-        <mat-radio-button value="M">M</mat-radio-button>
-        <mat-radio-button value="V">V</mat-radio-button>
+      <mat-radio-group [(ngModel)]="lid.man" aria-label="Geslacht" labelPosition="before" aria-required="true" style="font-size: smaller;">
+        <mat-radio-button [value]="true">M</mat-radio-button>
+        <mat-radio-button [value]="false">V</mat-radio-button>
       </mat-radio-group>
     </div>
   </div>
@@ -42,7 +42,7 @@
 <div>
 <mat-form-field appearance="fill">
     <mat-label>Geboortedatum</mat-label>
-    <input matInput [matDatepicker]="picker" [max]="maxDate" required>
+    <input matInput [matDatepicker]="picker" [max]="maxDate" required [(ngModel)]="lid.geboortedatum">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker startView="multi-year" [startAt]="startDate"></mat-datepicker>
   </mat-form-field>
@@ -50,31 +50,37 @@
 <div>
   <mat-form-field appearance="fill">
     <mat-label>Rijksregisternummer</mat-label>
-    <input matInput type="text" maxlength="11" minlength="11" pattern="[0-9]{11}">
+    <input matInput type="text" maxlength="11" minlength="11" pattern="[0-9]{11}" [(ngModel)]="lid.rijksregister">
   </mat-form-field>
 </div>
 <div>
 <mat-form-field appearance="fill">
     <mat-label>Geboorte plaats</mat-label>
-    <input matInput required>
+    <input matInput required [(ngModel)]="lid.geboorteplaats">
   </mat-form-field>
 </div>
 <div>
 <mat-form-field appearance="fill">
     <mat-label>email</mat-label>
-    <input matInput required type="email">
+    <input matInput required type="email" [(ngModel)]="lid.email">
   </mat-form-field>
 </div>
 <div>
+  <mat-form-field appearance="fill">
+      <mat-label>email 2</mat-label>
+      <input matInput required type="email" [(ngModel)]="lid.email2">
+    </mat-form-field>
+  </div>
+  <div>
 <mat-form-field appearance="fill">
     <mat-label>Telefoonnummer</mat-label>
-    <input matInput required>
+    <input matInput required [(ngModel)]="lid.tel">
   </mat-form-field>
 </div>
 <div>
 <mat-form-field appearance="fill">
     <mat-label>Telefoonnummer 2</mat-label>
-    <input matInput required>
+    <input matInput required [(ngModel)]="lid.tel2">
   </mat-form-field>
 </div>
 <div>
