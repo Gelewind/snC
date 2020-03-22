@@ -12,6 +12,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatNativeDateModule } from '@angular/material/core';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [],
@@ -28,7 +31,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatRadioModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTabsModule,
+    MatBadgeModule,
+    DragDropModule
   ],
   exports: [
     MatDatepickerModule,
@@ -42,7 +48,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatRadioModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTabsModule,
+    MatBadgeModule,
+    DragDropModule
   ]
 })
 export class MaterialDesignModule { }

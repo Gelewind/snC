@@ -1,0 +1,61 @@
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Datum aanwezigheden</mat-label>
+        <input matInput [matDatepicker]="picker" required >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="month" ></mat-datepicker>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+      <mat-label>min graad</mat-label>
+      <mat-select>
+          <mat-option value="">onbepaald</mat-option>
+        <mat-option *ngFor="let graad of graden" [value]="graad.GraadID">{{graad.omschrijving}}</mat-option>
+      </mat-select>
+    </mat-form-field>&nbsp;
+    <mat-form-field>
+    <mat-label>max graad</mat-label>
+    <mat-select>
+        <mat-option value="">onbepaald</mat-option>
+        <mat-option *ngFor="let graad of graden" [value]="graad.GraadID">{{graad.omschrijving}}</mat-option>
+    </mat-select>
+    </mat-form-field>&nbsp;
+    <mat-form-field class="example-full-width">
+    <mat-label>min leeftijd</mat-label>
+    <input matInput placeholder="6" type="number">
+    </mat-form-field>&nbsp;
+    <mat-form-field class="example-full-width">
+    <mat-label>max leeftijd</mat-label>
+    <input matInput placeholder="6" type="number">
+    </mat-form-field>&nbsp;
+    <mat-form-field>
+    <mat-label>Licentie</mat-label>
+    <input matInput placeholder="6" type="number">
+    </mat-form-field>&nbsp;
+</div>  
+  
+<div class="example-container">
+    <h3>Aanwezig</h3>
+    <div
+      cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="LedenAanw"
+      [cdkDropListConnectedTo]="[doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of LedenAanw" cdkDrag>{{item.licentie}} {{item.voornaam}} {{item.achternaam}}</div>
+    </div>
+</div>
+<div class="example-container">
+    <h3>Afwezig</h3>
+    <div
+        cdkDropList
+        #doneList="cdkDropList"
+        [cdkDropListData]="LedenAfw"
+        [cdkDropListConnectedTo]="[todoList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of LedenAfw" cdkDrag>{{item.licentie}} {{item.voornaam}} {{item.achternaam}}</div>
+    </div>
+</div>

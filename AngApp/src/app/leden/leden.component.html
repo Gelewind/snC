@@ -18,5 +18,11 @@
 <mat-form-field class="example-full-width">
   <mat-label>max leeftijd</mat-label>
   <input matInput placeholder="6" type="number">
-</mat-form-field>
+</mat-form-field>&nbsp;
+<mat-form-field>
+  <mat-label>max graad</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let lid of Leden" [value]="lid.licentie">{{lid.voornaam}}&nbsp;{{lid.achternaam}}</mat-option>
+  </mat-select>
+</mat-form-field>&nbsp;
 </div>  

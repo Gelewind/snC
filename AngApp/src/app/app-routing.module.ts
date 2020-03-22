@@ -4,12 +4,15 @@ import { AanwezigComponent } from './aanwezig/aanwezig.component';
 import { HomeComponent } from './home/home.component';
 import { LidComponent } from './lid/lid.component';
 import { LedenComponent} from './leden/leden.component';
+import {DagaanwezigComponent} from './dagaanwezig/dagaanwezig.component';
 
 const routes: Routes = [{ path: '', component: AanwezigComponent },
 { path: 'Home', component: HomeComponent },
 { path: 'Aanwezig', component: AanwezigComponent },
 { path: 'Lid', component: LidComponent },
-{ path: 'Filter lid', component: LedenComponent}
+{ path: 'Filter lid', component: LedenComponent },
+{ path: 'dAan', component: DagaanwezigComponent }
+
 ];
 
 @NgModule({
