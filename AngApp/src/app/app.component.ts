@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {MenuItem} from './Menu/menuitem';
+import { GetdataService } from '../getdata.service';
+// import { MenuItem } from './Menu/menuitem';
 
 
 @Component({
@@ -8,15 +9,14 @@ import {MenuItem} from './Menu/menuitem';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  objectKeys = Object.keys;
-  title = 'AngApp';
-  menuItems: MenuItem[] = new Array(
-    {title: 'Aanwezigheden', route: ''},
-    {title: 'Home', route: ''},
-    {title: 'Gegevens', route: ''}
-  );
-  // mymenu = [
-  //   desc:'main1', Child: ['sub1', 'sub2'],
-  //   desc:'main2', Child: ['sub1', 'sub2', 'sub3']
+//  objectKeys = Object.keys;
+//  title = 'AngApp';
+isAdmin = false;
+isAuth = false;
+
+constructor(private getdataService: GetdataService) {
+  this.isAdmin = getdataService.isAdmin();
+  this.isAuth = getdataService.isAuth();
+}
   }
 

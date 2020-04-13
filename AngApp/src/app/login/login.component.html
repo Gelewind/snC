@@ -1,0 +1,13 @@
+<p>login works!</p>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Licentie</mat-label>
+        <input matInput type="number" [(ngModel)]="loginForm.lic" name="lic" required>
+    </mat-form-field><br/>
+    <mat-form-field class="example-full-width">
+        <mat-label>Paswoord</mat-label>
+        <input matInput type="password" [(ngModel)]="loginForm.pw" name="pw" required>
+    </mat-form-field><br/>
+    <button mat-button color="primary" (click)="Login(loginForm)" >Login</button>&nbsp;
+    <button mat-button color="accent">Paswoord vergeten</button>
+</form>

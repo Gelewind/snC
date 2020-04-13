@@ -1,1 +1,10 @@
 /* C:\GIT\Fork\Angular_SkcSN\AngApp\node_modules\@angular\material\prebuilt-themes */
+a.navlink {
+	margin: 1px;
+	background-color: white;
+    border-radius: 6px;
+}
+a.navlink.active.fluffy {
+	color: black;
+	opacity: 0.5;
+}

@@ -300,15 +300,40 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <mat-icon aria-hidden="false" aria-label="Menu" style='cursor: pointer;' [matMenuTriggerFor]="main_menu">menu</mat-icon>    
-  <mat-icon aria-hidden="false" aria-label="Home" [routerLink]="['/Home']" style='cursor: pointer;'>home</mat-icon>
-  <mat-icon aria-hidden="false" aria-label="Aanwezig" [routerLink]="['/Aanwezig']" style='cursor: pointer;'>calendar_today</mat-icon>
-  <mat-icon aria-hidden="false" aria-label="Lid" [routerLink]="['/Lid']" style='cursor: pointer;'>account_box</mat-icon>
-  <mat-menu #main_menu="matMenu">
+  <a
+    *ngIf="!isAuth"
+    class="navlink" 
+    [routerLink]="['/login']"
+    [routerLinkActive]="'active fluffy'" >
+    <mat-icon aria-hidden="false" aria-label="Login">how_to_reg</mat-icon>
+  </a>
+  <a
+    *ngIf="isAuth"
+    class="navlink" 
+    [routerLink]="['/Aanwezig']" 
+    [routerLinkActive]="'active fluffy'" >
+    <mat-icon aria-hidden="false" aria-label="Lid">event_available</mat-icon>
+  </a>
+  <!-- <mat-icon aria-hidden="false" aria-label="Menu" style='cursor: pointer;' [matMenuTriggerFor]="main_menu">menu</mat-icon>     -->
+  <a
+    *ngIf="isAuth"
+    class="navlink" 
+    [routerLink]="['/lid']" 
+    [routerLinkActive]="'active fluffy'" >
+    <mat-icon aria-hidden="false" aria-label="Lid">person</mat-icon>
+  </a>
+  <a
+    *ngIf="isAdmin"
+    class="navlink" 
+    [routerLink]="['/Home/ZetAanw']" 
+    [routerLinkActive]="'active fluffy'" >
+  <mat-icon aria-hidden="false" aria-label="Admin">people</mat-icon>
+</a>
+  <!-- <mat-menu #main_menu="matMenu">
     <ng-container *ngFor="let menuItem of menuItems">
       <button mat-menu-item>{{ menuItem.title }}</button>
     </ng-container>
-  </mat-menu>
+  </mat-menu> -->
   <div class="spacer"></div>
 </div>
 

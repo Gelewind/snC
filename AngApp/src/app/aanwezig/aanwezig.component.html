@@ -1,60 +1,24 @@
 <p>
-    <button class="AanwB"
-        matBadge="35" 
-        matBadgePosition="below after">17</button>
-    <button class="AanwB"
-        matBadge="114" 
-        matBadgePosition="below after">18</button>
-    <button class="AanwB"
-        matBadge="111" 
-        matBadgePosition="below after">19</button>
-    <button class="AanwB" disabled
-        matBadge="25" 
-        matBadgePosition="below after">20</button>
-    </p>
-    <p style="max-width: 280px;">
-        <button class="AanwB"
-            matBadge="11" 
-            matBadgePosition="below after">20<br />01</button>
-        <button  class="AanwB"
-            matBadge="10"
-            matBadgePosition="below after">20<br />02</button>
-        <button  class="AanwB" disabled
-            matBadge="4" 
-            matBadgePosition="below after">20<br />03</button>
-            <button class="AanwB"
-            matBadge="11" 
-            matBadgePosition="below after">20<br />01</button>
-        <button  class="AanwB"
-            matBadge="10"
-            matBadgePosition="below after">20<br />02</button>
-        <button  class="AanwB" disabled
-            matBadge="4" 
-            matBadgePosition="below after">20<br />03</button>
-            <button class="AanwB"
-            matBadge="11" 
-            matBadgePosition="below after">20<br />01</button>
-        <button  class="AanwB"
-            matBadge="10"
-            matBadgePosition="below after">20<br />02</button>
-        <button  class="AanwB" disabled
-            matBadge="4" 
-            matBadgePosition="below after">20<br />03</button>
-            <button class="AanwB"
-            matBadge="11" 
-            matBadgePosition="below after">20<br />01</button>
-        <button  class="AanwB"
-            matBadge="10"
-            matBadgePosition="below after">20<br />02</button>
-        <button  class="AanwB" disabled
-            matBadge="4" 
-            matBadgePosition="below after">20<br />03</button>
-    </p>
+    <button *ngFor="let item of recsjaar" 
+        class="AanwB"
+        (click)="setJaar(item.Tijdstip)"
+        [matBadge]="item.aantal" 
+        matBadgePosition="below after">{{item.Tijdstip | date:'yy'}}</button>
+</p>
+<p style="max-width: 280px;">
+    <button *ngFor="let item of recsmaand"  
+        class="AanwB"
+        (click)="setCalendarData(item.Tijdstip)"
+        [matBadge]="item.aantal" 
+        matBadgePosition="below after">{{item.Tijdstip | date:'yy'}}<br />{{item.Tijdstip | date:'M'}}</button>
+</p>
 <div (click)="$event.stopPropagation()">
     <mat-calendar #calendar
         (selectedChange)="select($event,calendar)" 
         [dateClass]="isSelected"
+        [minDate]="minDate"
+        [maxDate]="maxDate"
+        [startAt]="selectedMonth"
         weekStart="2">
     </mat-calendar> 
 </div>
-<!-- <p class="cal_date">{{daysSelected}} </p> -->

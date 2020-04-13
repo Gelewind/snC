@@ -15,11 +15,14 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCommonModule } from '@angular/material/core';
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    MatTableModule,
     MatDatepickerModule,
     MatIconModule,
     MatInputModule,
@@ -33,10 +36,14 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatSlideToggleModule,
     MatNativeDateModule,
     MatTabsModule,
+    MatPaginatorModule,
     MatBadgeModule,
+    MatCommonModule,
     DragDropModule
   ],
   exports: [
+    CommonModule,
+    MatTableModule,
     MatDatepickerModule,
     MatIconModule,
     MatInputModule,
@@ -50,7 +57,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatSlideToggleModule,
     MatNativeDateModule,
     MatTabsModule,
+    MatPaginatorModule,
     MatBadgeModule,
+    MatCommonModule,
     DragDropModule
   ]
 })
