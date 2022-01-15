@@ -1,0 +1,2 @@
+<input #csvInput hidden="true" type="file" onclick="this.value=null" (change)="VKFxls($event)" accept=".xls,.xlsx"/>
+Leden VKF <button mat-icon-button (click)="csvInput.click()"><fa-icon [icon]="faFileExcel" size="lg"></fa-icon></button>

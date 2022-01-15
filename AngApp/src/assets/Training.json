@@ -1,0 +1,9 @@
+{
+    "Msgs":[],
+    "Rows":[
+        {"TrainingID":1,"TrainingTypeID":1,"Dag":"2020-09-13","HoofdLesgever":101311,"Lesgever2":0,"Lesgever3":0},
+        {"TrainingID":3,"TrainingTypeID":3,"Dag":"2020-09-13","HoofdLesgever":2054,"Lesgever2":0,"Lesgever3":0},
+        {"TrainingID":5,"TrainingTypeID":5,"Dag":"2020-09-16","HoofdLesgever":2054,"Lesgever2":0,"Lesgever3":0},
+        {"TrainingID":7,"TrainingTypeID":7,"Dag":"2020-09-18","HoofdLesgever":12248,"Lesgever2":0,"Lesgever3":0}
+    ]
+}

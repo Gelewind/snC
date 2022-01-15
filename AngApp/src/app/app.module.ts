@@ -1,53 +1,55 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
+// import {  MAT_MOMENT_DATE_FORMATS,  MomentDateAdapter,  MAT_MOMENT_DATE_ADAPTER_OPTIONS,} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+// import 'moment/locale/nl';
+import { MyDateAdapter } from './adaptor/custom-date'
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AanwezigComponent } from './aanwezig/aanwezig.component';
-import { HomeComponent } from './home/home.component';
-import { MaterialDesignModule } from '../material-design/material-design.module';
-import { registerLocaleData, DatePipe } from '@angular/common';
-import localeNl from '@angular/common/locales/nl-BE';
-import localeNlExtra from '@angular/common/locales/extra/nl-BE';
-import { LidComponent } from './lid/lid.component';
-import { LedenComponent } from './leden/leden.component';
-import { DagaanwezigComponent } from './dagaanwezig/dagaanwezig.component';
-import { formatDate } from '@angular/common';
-import { ExLijstComponent } from './ex-lijst/ex-lijst.component';
-import { LoginComponent } from './login/login.component';
-import { InschrComponent } from './inschr/inschr.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatNativeDateModule, } from '@angular/material/core';
 
-
-registerLocaleData(localeNl, 'fr-FR', localeNlExtra);
+import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { DragDropModule } from '@angular/cdk/drag-drop'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { AanwezigComponent } from './component/aanwezig/aanwezig.component';
+import { UploadComponent } from './component/upload/upload.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     AanwezigComponent,
-    HomeComponent,
-    LidComponent,
-    LedenComponent,
-    DagaanwezigComponent,
-    ExLijstComponent,
-    LoginComponent,
-    InschrComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule, ReactiveFormsModule,
-    MaterialDesignModule,
-    HttpClientModule
+    BrowserAnimationsModule,
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+
+    MatButtonModule,
+    MatDatepickerModule,
+    DragDropModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatToolbarModule
   ],
-  // providers: [
-  //   {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},
-  // ],
-  providers: [DatePipe],
-  bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'nl-BE'},
+    {provide: DateAdapter, useClass: MyDateAdapter }],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

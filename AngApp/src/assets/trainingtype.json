@@ -1,0 +1,8 @@
+{   
+    "Msgs":[],
+    "Rows":[
+        {"TrainingTypeID":1,"omschrijving":"Zondag Volwassenen","MinLeeftijd":12,"MaxLeeftijd":100,"MinGraadID":0,"MaxGraadID":17,"Aanvang":"10:30:00","Einde":"12:00:00","MaxDeelnemers":24},
+        {"TrainingTypeID":3,"omschrijving":"Zondag kinderen","MinLeeftijd":6,"MaxLeeftijd":12,"MinGraadID":0,"MaxGraadID":17,"Aanvang":"09:30:00","Einde":"10:30:00","MaxDeelnemers":24},
+        {"TrainingTypeID":5,"omschrijving":"Woensdag","MinLeeftijd":10,"MaxLeeftijd":100,"MinGraadID":0,"MaxGraadID":17,"Aanvang":"20:00:00","Einde":"21:30:00","MaxDeelnemers":24},
+        {"TrainingTypeID":7,"omschrijving":"Vrijdag","MinLeeftijd":14,"MaxLeeftijd":100,"MinGraadID":4,"MaxGraadID":17,"Aanvang":"20:15:00","Einde":"21:30:00","MaxDeelnemers":24}]
+}

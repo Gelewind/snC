@@ -1,0 +1,23 @@
+{
+    "Msgs":[],
+    "Rows":[
+        {"GraadID":0,"omschrijving":"0de KYU"},
+        {"GraadID":1,"omschrijving":"9de KYU"},
+        {"GraadID":2,"omschrijving":"8de KYU"},
+        {"GraadID":3,"omschrijving":"7de KYU"},
+        {"GraadID":4,"omschrijving":"6de KYU"},
+        {"GraadID":5,"omschrijving":"5de KYU"},
+        {"GraadID":6,"omschrijving":"4de KYU"},
+        {"GraadID":7,"omschrijving":"3de KYU"},
+        {"GraadID":8,"omschrijving":"2de KYU"},
+        {"GraadID":9,"omschrijving":"1ste KYU"},
+        {"GraadID":10,"omschrijving":"1ste dan"},
+        {"GraadID":11,"omschrijving":"2de dan"},
+        {"GraadID":12,"omschrijving":"3de dan"},
+        {"GraadID":13,"omschrijving":"4de dan"},
+        {"GraadID":14,"omschrijving":"5de dan"},
+        {"GraadID":15,"omschrijving":"6de dan"},
+        {"GraadID":16,"omschrijving":"7de dan"},
+        {"GraadID":17,"omschrijving":"8de dan"}
+    ]
+}

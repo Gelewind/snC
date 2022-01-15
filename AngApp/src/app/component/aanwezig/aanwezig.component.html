@@ -1,0 +1,49 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+        <label for="minleeftijd">Min leeftijd</label>
+      <input matInput id="minleeftijd" type="number" formControlName="minleeftijd">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <label for="maxleeftijd">Max leeftijd</label>
+      <input matInput id="maxleeftijd" type="number" formControlName="maxleeftijd">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="datum" 
+            [max]="maxdate"
+            min="2017-09-08"
+            (dateChange)="changeEvent($event)">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker [dateClass]="dateClass()" startView="year"></mat-datepicker>
+      </mat-form-field>
+  </form>
+  <div class="example-container">
+    <h2>To do</h2>
+  
+    <div
+      cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="todo"
+      [cdkDropListConnectedTo]="[doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>
+        <div class="cdk-drag-placeholder"></div>{{item}}</div>
+    </div>
+  </div>
+  
+  <div class="example-container">
+    <h2>Done</h2>
+  
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>
+        <div class="cdk-drag-placeholder"></div>{{item}}</div>
+    </div>
+  </div>
+  <!-- <div *ngFor="let lid of aktieveLeden">{{lid.Achternaam}}</div>  -->
